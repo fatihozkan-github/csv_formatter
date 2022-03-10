@@ -47,14 +47,10 @@ def handle_second_case(row_list):
 
 def handle_third_case(row_list):
     print("Enter parameters (Optional)")
-    image_size = input("Image size(Default:512): ")
-    decimal = input("Decimal(Default:8): ")
-    debug = input("Show Debug(Default:False): ")
-    try:
-        fix_coordinates(row_list, image_size=int(image_size), decimal=int(decimal), debug=debug)
-        print("Coordinates adjusted.")
-    except (Exception,):
-        print("Input error, please enter correct parameters.")
+    image_size = int(input("Image size(Default:512): "))
+    decimal = int(input("Decimal(Default:8): "))
+    fix_coordinates(row_list, image_size=int(image_size), decimal=int(decimal))
+    print("Coordinates adjusted.")
 
 
 def handle_menu_event(index: int, row_list: list, root_path: str):
